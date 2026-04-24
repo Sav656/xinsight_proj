@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@media print {
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .bg-slate-800\/50,
+  .bg-slate-800,
+  .bg-slate-900\/50,
+  .bg-slate-900 {
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .text-white,
+  .text-slate-300,
+  .text-slate-400 {
+    color: #1e293b !important;
+  }
+
+  .border-slate-700,
+  .border-slate-600 {
+    border-color: #e2e8f0 !important;
+  }
+
+  .rounded-2xl,
+  .rounded-lg {
+    border-radius: 8px !important;
+  }
+
+  .shadow-2xl,
+  .shadow-xl {
+    box-shadow: none !important;
+  }
+
+  @page {
+    margin: 1in;
+    size: letter;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+}
